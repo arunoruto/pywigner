@@ -158,9 +158,11 @@ A small example program can be found in example/csimple.c.
 
 To compile and link with WIGXJPF:
 
+```sh
 CFLAGS += -Ipath-to-wigxjpf/inc/
 LDFLAGS += -Lpath-to-wigxjpf/lib/
 LDLIBS += -lwigxjpf -lm
+```
 
 
 ## 5.2 Simple FORTRAN interface
@@ -177,48 +179,55 @@ in the mod/ directory during compilation of the FORTRAN test program
 (which also selects the FORTRAN compiler to use).  Compilation of
 FORTRAN programs thus need to include also that directory:
 
-FCFLAGS += -I path-to-wigxjpf/mod/
-
+`FCFLAGS += -I path-to-wigxjpf/mod/`
 
 ## 5.3 Python-interface
 
 The python interface is analog to the C interface described above.
 
-A module 'pywigxjpf' is available in pywigxjpf/pywigxjpf.py
+A module 'pywigxjpf' is available in `pywigxjpf/pywigxjpf.py`
 
 The use of the module requires numpy and cffi.
 
 To build the wrapper (required once):
 
+```sh
 make pywigxjpf_ffi
-
+```
 A small example program can be found in example/pysimple.py.  As shown
 in this example, to use the interface in python, the module must be
 imported with, e.g.,
 
+```py
 import pywigxjpf as wig
+```
 
 after which a number of functions (such as wig.wig3jj) become
 available. Help text is available via e.g.
 
+```py
 help(wig)                # For interfaces.
 help(wig.pywigxjpf)      # For usage information.
+```
 
 To find the module, the path can be set in PYTHONPATH, e.g. with bash:
 
-export PYTHONPATH=path-to-wigxjpf/pywigxjpf/
-example/pysimple.py
+```sh
+export PYTHONPATH=path-to-wigxjpf/pywigxjpf/example/pysimple.py
+```
 
 Alternatively, the module can be installed (first build WIGXJPF):
 
+```sh
 make
 python setup.py install
+```
 
-You may need to add --user to the second command.
+You may need to add `--user` to the second command.
 
 
 Note: When evaluating a fair amount of symbols in python, it may be
-useful to try the numba jit compiler.  See example/py_numba_example.py
+useful to try the numba jit compiler. See `example/py_numba_example.py`
 
 
 ## 5.4 Native interface
@@ -249,7 +258,7 @@ Differences are:
 
   and additionally link with
 
-  LDLIBS += -lwigxjpf_quadmath -quadmath
+  `LDLIBS += -lwigxjpf_quadmath -quadmath`
 
 - Even though explicit routines to check for trivial zeros of symbols
   are exposed, there is no need to call them unless only that result
@@ -265,10 +274,10 @@ H. T. Johansson and C. Forssén, Fast and Accurate Evaluation of Wigner 3j,
 6j, and 9j Symbols Using Prime Factorization and Multiword Integer Arithmetic,
 SIAM J. Sci. Comput., 38(1) (2016), A376-A384.
 
+```bibtex
 @article{johansson2016,
    author = {H. T. Johansson and C. Forss\’en},
-    title = {Fast and Accurate Evaluation of Wigner 3\$j\$, 6\$j\$, and 9\$j\$
-Symbols Using Prime Factorization and Multiword Integer Arithmetic},
+    title = {Fast and Accurate Evaluation of Wigner 3\$j\$, 6\$j\$, and 9\$j\$ Symbols Using Prime Factorization and Multiword Integer Arithmetic},
   journal = {SIAM Journal on Scientific Computing},
    volume = {38},
    number = {1},
@@ -278,6 +287,7 @@ Symbols Using Prime Factorization and Multiword Integer Arithmetic},
       URL = {http://dx.doi.org/10.1137/15M1021908},
    eprint = {http://dx.doi.org/10.1137/15M1021908}
 }
+```
 
 Pre-print (2015) at arXiv:1504.08329.
 
