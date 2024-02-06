@@ -1,6 +1,6 @@
 [project]
 name = "pywigner"
-version = "1.11"
+version = "1.12"
 description = "Wigner Symbols"
 authors = [
     {name = "Håkan T. Johansson"},
