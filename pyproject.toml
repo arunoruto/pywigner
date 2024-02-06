@@ -19,10 +19,7 @@ Homepage = "http://fy.chalmers.se/subatom/wigxjpf"
 
 [build-system]
 requires = [
-    "setuptools",
+    "setuptools>=40.8.0",
     "pycparser"
 ]
-
-[tool.setuptools]
-setup_requires = ["numpy", "cffi>=1.0.0"]
-cffi_modules = ["pywigxjpf/pywigxjpf_ffi_builder.py:ffibuilder"]
+build-backend = "setuptools.build_meta"
