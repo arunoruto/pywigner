@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Johansson"
+    given-names: "Håkan. T."
+  - family-names: "Christian"
+    given-names: "Forssén"
+title: "Fast and Accurate Evaluation of Wigner 3j, 6j, and 9j Symbols Using Prime Factorization and Multiword Integer Arithmetic"
+version: 1.11
+doi: 10.1137/15M1021908
+date-released: 2015-04-30
+url: "https://fy.chalmers.se/subatom/wigxjpf/"
