@@ -314,7 +314,7 @@ Arithmetic, SIAM J. Sci. Comput., 38(1) (2016), A376-A384.
       eprint = {http://dx.doi.org/10.1137/15M1021908}
    }
 
-Pre-print (2015) at arXiv:1504.08329.
+Pre-print (2015) at `arXiv:1504.08329 <https://arxiv.org/abs/1504.08329>`__.
 
 7. Contact
 ==========
